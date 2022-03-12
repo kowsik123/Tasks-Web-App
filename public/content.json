@@ -1,0 +1,66 @@
+{
+    "taskGroupList": [],
+    "taskList": [],
+    "types": [
+        {
+            "type": "CHECK USER",
+            "data": ["credentialId"],
+            "response": ["TYPE USER"]
+        },
+        {
+            "type": "ADD USER",
+            "data": ["email","password","name"],
+            "response": ["credentialId"]
+        },
+        {
+            "type": "GET TASK_GROUP_LIST",
+            "data": [],
+            "response": { "taskGroupList": ["TYPE TASK_GROUP"] }
+        },
+        {
+            "type": "ADD TASK_GROUP",
+            "data": [ "name-taskGroupName" ],
+            "response": { "taskGroup": "TYPE TASK_GROUP" }
+        },
+        {
+            "type": "DELETE TASK_GROUP",
+            "data": [ "id-taskGroupId" ],
+            "response": []
+        },
+        {
+            "type": "ADD TASK",
+            "data": [ "TYPE TASK" , "id-taskGroupId"],
+            "response": [ "TYPE TASK" ]
+        },
+        {
+            "type": "DELETE TASK",
+            "data": [ "id-taskId" ],
+            "response": []
+        },
+        {
+            "type": "COMPLETE TASK",
+            "data": [ "taskId"],
+            "response": [ "TYPE TASK" ]
+        }
+    ],
+    "DEFAULT DATA": "cretialId",
+    "DEFAULT RESPONSE": "ENUM SUCCESS",
+    "TYPE USER": {
+        "email": "EMAIL",
+        "password": "PASSWORD"
+    },
+    "TYPE TASK_GROUP": {
+        "id": "TASK_GROUP_ID",
+        "name": "TASK_GROUP_NAME"
+    },
+    "TYPE TASK": {
+        "name": "NAME REQUIRED",
+        "id": "TASK_ID REQUIRED",
+        "detail": "TASK_DETAIL",
+        "date": "TASK_DATE",
+        "time": "TASK_TIME",
+        "status": "ENUM STATUS"
+    },
+    "ENUM STATUS": ["COMPLETED","NOT_COMPLETED","TODAY","OUTDATED"],
+    "ENUM SUCCESS": [true,false]
+}

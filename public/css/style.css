@@ -1,0 +1,317 @@
+#rk-task-des{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transition: left 1s;
+    box-shadow: 0 0 4px rgba(43, 43, 43, 0.59);
+}
+
+.my-input:focus{
+    box-shadow: 0 0 0 0.25rem rgb(253 13 13 / 25%);
+    border: #d8363a;
+}
+
+.gradient-hover:hover{
+    background: #fccb90;
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+.login_cont{
+    width: 100vw;
+    height: 80vh;
+    margin-top: 10vh;
+}
+
+.btn-shadow {
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.arrow_i{
+    transition: transform 1s ease 0s;
+}
+
+.btn-shadow:hover {
+    box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+}
+
+html.wait, html.wait * {
+    cursor: wait !important;
+}
+
+#hover_effect {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+}
+
+#hover_effect i {
+    font-size: 14px;
+    line-height: 1.5px;
+}
+
+#hover_effect:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.task_group_pane {
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+}
+
+#tab_content {
+    width: 100%;
+    z-index: 2;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    background-color: rgba(128, 144, 158, 0.4);
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #5c5c5c6e;
+    width: 5px;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 10;
+    padding-top: 15px;
+}
+
+#nav_ul {
+    position: sticky;
+    top: 60px;
+    background-color: white;
+    width: 100%;
+    z-index: 10;
+}
+
+#floating_button {
+    --bs-bg-opacity: 0.80;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    transition: width 1s, height 1s, background-color 1s, right 1s, bottom 1s;
+    overflow: hidden;
+    z-index: 30;
+}
+
+#floating_inner_btn {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+}
+
+#task_adder_cont {
+    margin-top: 35px;
+    padding-left: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    #task_adder_cont {
+        padding-left: 20px;
+    }
+}
+
+#task_name_input {
+    all: unset;
+    font-size: 1.2em;
+    width: calc( 100% - 40px );
+}
+
+#task_details{
+    all: unset;
+    font-size: 1.2em;
+    width: calc( 100% - 40px );
+}
+
+#new_list::placeholder{
+    color: var(--bs-gray-700);
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    color: white;
+}
+
+input::-ms-input-placeholder {
+    color: white;
+}
+
+#task_option_adder{
+    position: absolute;
+    bottom: 20px;
+    font-size: 30px;
+}
+
+#task_option_adder button{
+    all: unset;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    float: left;
+    margin-right: 20px;
+    color: #ffffff;
+    font-size: 27px;
+    overflow: hidden;
+    position: relative;
+}
+
+#task_option_adder button:hover{
+    background-color: white;
+    color: #0d6efd;
+}
+
+#task_option_adder button:nth-child(2):hover{
+    box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
+}
+
+#task_option_adder button:nth-child(3):hover{
+    box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
+}
+
+.btn-close-end{
+    width: 17px;
+    box-sizing: border-box;
+    margin: 1px 2px;
+    background-size: 0.7em;
+    height: 17px;
+    border-radius: 17px;
+}
+
+#task_option_adder button:focus{
+    box-shadow: 0 0 0 0.25rem rgb(211 212 213 / 50%);
+}
+
+::-webkit-datetime-edit { display: none;color: transparent !important; }
+::-webkit-datetime-edit-fields-wrapper { display: none;color: transparent !important; }
+::-webkit-datetime-edit-text { display: none;color: transparent !important; }
+::-webkit-datetime-edit-month-field { display: none;color: transparent !important; }
+::-webkit-datetime-edit-day-field { display: none;color: transparent !important; }
+::-webkit-datetime-edit-year-field { display: none;color: transparent !important; }
+::-webkit-inner-spin-button { display: none;color: transparent !important; }
+::-webkit-calendar-picker-indicator { 
+    cursor: pointer;
+    opacity: 0;
+    background-color: #ffffff;
+    position: relative;
+    left: -12px;
+    color: transparent;
+}
+
+.b_w_c{
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-left: 12px;
+    height: 35px;
+}
+
+#time_input{
+    all: unset;
+    position: absolute;
+    left: 5px;
+    color: transparent !important;
+    width: 100% !important;
+}
+
+#date_input{
+    color: transparent !important;
+}
+
+.btn-focus-style:focus{
+    box-shadow: 0 0 0 0.25rem rgb(108, 82, 190, 0.5) !important;
+}
+
+#floating_button_i{
+    transition: transform 0.5s;
+}
+/* 
+.task-expanded{
+    height: fit-content !important;
+} */
+
+.task-card{
+    height: 58px;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.task-button-group{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.empty_img {
+    width: 210px;
+    height: 180px;
+    margin: 0 auto;
+    margin-top: 20vh;
+    display: block;
+    opacity: 0.5;
+}
+
+.gradient-custom-2:hover{
+    opacity: 1;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.gradient-custom {
+    background: #fccb90;
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+.gradient-custom-2 {
+    background: #fccb90;
+    opacity: 0.9;
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+.empty_img_text{
+    margin: 20px auto;
+    text-align: center;
+    opacity: 0.5;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    color: gray;
+}
